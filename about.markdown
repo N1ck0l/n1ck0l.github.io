@@ -1,18 +1,36 @@
 ---
 layout: page
-title: About
+title: Sobre
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# Bem-vindo ao Grimório de um Espadachim de TI ⚔️
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Olá, sou **Nickolas**, um espadachim dos tempos modernos que combate nas trincheiras da tecnologia.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## Sobre Este Blog
 
+Este é um espaço dedicado a documentar minhas aventuras, descobertas e soluções nas áreas de:
 
-[jekyll-organization]: https://github.com/jekyll
+- 🔧 **Hardware** - Otimização, troubleshooting e upgrade de equipamentos
+- 🌐 **Redes** - Configuração, segurança e análise de redes
+- 💻 **Sistemas Operacionais** - Tweaks, otimizações e best practices
+- 🛡️ **Segurança** - Práticas seguras e troubleshooting de malware
+- 📚 **DevOps & Infrastructure** - Ferramentas e metodologias modernas
+
+## Por Que "Espadachim de TI"?
+
+Como um espadachim medieval, um profissional de TI precisa:
+- ⚔️ Estar sempre afiado e em aprendizado contínuo
+- 🛡️ Defender contra ataques e problemas inesperados
+- 🎯 Ser preciso e estratégico nas soluções
+- 📜 Documentar sua jornada para compartilhar conhecimento
+
+## Entre em Contato
+
+📧 Email: [nickolasfelipe225@gmail.com](mailto:nickolasfelipe225@gmail.com)
+🐙 GitHub: [github.com/N1ck0l](https://github.com/N1ck0l)
+
+---
+
+*"A melhor defesa é o conhecimento"* ⚡
