@@ -76,11 +76,11 @@ main {
 }
 
 .site-title {
-  color: #00d4ff;
+  color: #ffffff !important;
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 3px;
-  text-shadow: none;
+  text-shadow: none !important;
   transition: all 0.3s ease;
   background: rgba(0, 0, 0, 0.7);
   padding: 0.5rem 1rem;
@@ -89,9 +89,9 @@ main {
 }
 
 .site-title:hover {
-  color: #ff006e;
-  text-shadow: none;
-  background: rgba(0, 0, 0, 0.8);
+  color: #00d4ff !important;
+  text-shadow: none !important;
+  background: rgba(0, 0, 0, 0.9);
   border-color: #ff006e;
 }
 
@@ -104,14 +104,14 @@ main {
 }
 
 .page-link {
-  color: #00d4ff;
+  color: #ffffff !important;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border: 2px solid #00d4ff;
   transition: all 0.3s ease;
   position: relative;
-  text-shadow: none;
+  text-shadow: none !important;
   font-size: 1rem;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 3px;
@@ -124,7 +124,7 @@ main {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-cyan), var(--primary-magenta));
+  background: linear-gradient(90deg, #00d4ff, #ff006e);
   transition: width 0.3s ease;
 }
 
@@ -133,8 +133,8 @@ main {
 }
 
 .page-link:hover {
-  color: #ff006e;
-  text-shadow: none;
+  color: #00d4ff !important;
+  text-shadow: none !important;
   background: rgba(0, 0, 0, 0.8);
   border-color: #ff006e;
 }
