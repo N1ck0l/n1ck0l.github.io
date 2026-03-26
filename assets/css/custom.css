@@ -23,6 +23,109 @@
   box-sizing: border-box;
 }
 
+/* ==================== GLOBAL CODE STYLES ==================== */
+
+code {
+  background: #050810 !important;
+  color: #39ff14 !important;
+  padding: 0.2rem 0.4rem !important;
+  border-radius: 3px !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+pre {
+  background: #050810 !important;
+  color: #39ff14 !important;
+  border: 2px solid #8000ff !important;
+  padding: 1rem !important;
+  overflow-x: auto;
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.3);
+}
+
+pre code {
+  background: none !important;
+  color: #39ff14 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* ==================== SYNTAX HIGHLIGHT BLOCKS ==================== */
+
+.highlight {
+  background: #050810 !important;
+  border: 2px solid #8000ff !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  border-radius: 4px !important;
+}
+
+.highlight pre {
+  background: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.highlight .c { color: #999999 !important; } /* comment */
+.highlight .err { color: #a61717 !important; } /* error */
+.highlight .k { color: #39ff14 !important; font-weight: bold !important; } /* keyword */
+.highlight .o { color: #00d4ff !important; } /* operator */
+.highlight .cm { color: #999999 !important; } /* comment.multiline */
+.highlight .cp { color: #999999 !important; } /* comment.preproc */
+.highlight .c1 { color: #999999 !important; } /* comment.single */
+.highlight .cs { color: #999999 !important; font-weight: bold !important; } /* comment.special */
+.highlight .gd { background-color: #ffdddd !important; color: #000000 !important; } /* generic.deleted */
+.highlight .ge { font-style: italic !important; } /* generic.emph */
+.highlight .gr { color: #aa0000 !important; } /* generic.error */
+.highlight .gh { color: #999999 !important; } /* generic.heading */
+.highlight .gi { background-color: #ddffdd !important; color: #000000 !important; } /* generic.inserted */
+.highlight .go { color: #888888 !important; } /* generic.output */
+.highlight .gp { color: #555555 !important; } /* generic.prompt */
+.highlight .gs { font-weight: bold !important; } /* generic.strong */
+.highlight .gu { color: #aaaaaa !important; } /* generic.subheading */
+.highlight .gt { color: #aa0000 !important; } /* generic.traceback */
+.highlight .kc { color: #39ff14 !important; font-weight: bold !important; } /* keyword.constant */
+.highlight .kd { color: #39ff14 !important; font-weight: bold !important; } /* keyword.declaration */
+.highlight .kn { color: #39ff14 !important; } /* keyword.namespace */
+.highlight .kp { color: #39ff14 !important; } /* keyword.pseudo */
+.highlight .kr { color: #39ff14 !important; font-weight: bold !important; } /* keyword.reserved */
+.highlight .kt { color: #00d4ff !important; } /* keyword.type */
+.highlight .m { color: #ff006e !important; } /* literal.number */
+.highlight .s { color: #ff006e !important; } /* literal.string */
+.highlight .na { color: #00d4ff !important; } /* name.attribute */
+.highlight .nb { color: #00d4ff !important; } /* name.builtin */
+.highlight .nc { color: #00d4ff !important; font-weight: bold !important; } /* name.class */
+.highlight .no { color: #008800 !important; } /* name.constant */
+.highlight .nd { color: #0000FF !important; } /* name.decorator */
+.highlight .ni { color: #999999 !important; } /* name.entity */
+.highlight .nf { color: #00d4ff !important; } /* name.function */
+.highlight .nl { color: #990000 !important; } /* name.label */
+.highlight .nn { color: #555555 !important; } /* name.namespace */
+.highlight .nt { color: #39ff14 !important; } /* name.tag */
+.highlight .nv { color: #008800 !important; } /* name.variable */
+.highlight .ow { color: #000000 !important; font-weight: bold !important; } /* operator.word */
+.highlight .w { color: #bbbbbb !important; } /* text.whitespace */
+.highlight .mf { color: #ff006e !important; } /* literal.number.float */
+.highlight .mh { color: #ff006e !important; } /* literal.number.hex */
+.highlight .mi { color: #ff006e !important; } /* literal.number.integer */
+.highlight .mo { color: #ff006e !important; } /* literal.number.oct */
+.highlight .sb { color: #ff006e !important; } /* literal.string.backtick */
+.highlight .sc { color: #ff006e !important; } /* literal.string.char */
+.highlight .sd { color: #ff006e !important; } /* literal.string.doc */
+.highlight .s2 { color: #ff006e !important; } /* literal.string.double */
+.highlight .se { color: #ff006e !important; } /* literal.string.escape */
+.highlight .sh { color: #ff006e !important; } /* literal.string.heredoc */
+.highlight .si { color: #ff006e !important; } /* literal.string.interpol */
+.highlight .sx { color: #ff006e !important; } /* literal.string.other */
+.highlight .sr { color: #ff006e !important; } /* literal.string.regex */
+.highlight .s1 { color: #ff006e !important; } /* literal.string.single */
+.highlight .ss { color: #ff006e !important; } /* literal.string.symbol */
+.highlight .bp { color: #999999 !important; } /* name.builtin.pseudo */
+.highlight .vc { color: #008800 !important; } /* name.variable.class */
+.highlight .vg { color: #008800 !important; } /* name.variable.global */
+.highlight .vi { color: #008800 !important; } /* name.variable.instance */
+.highlight .il { color: #ff006e !important; } /* literal.number.integer.long */
+
 /* ==================== BODY E ESTRUTURA GERAL ==================== */
 
 body {
@@ -324,29 +427,29 @@ main {
 }
 
 .post-content code {
-  background: #050810;
-  color: #39ff14;
-  padding: 0.2rem 0.4rem;
+  background: #050810 !important;
+  color: #39ff14 !important;
+  padding: 0.2rem 0.4rem !important;
   border-radius: 3px;
   border-left: 2px solid #ff006e;
-  font-family: 'Courier New', monospace;
+  font-family: 'Courier New', monospace !important;
 }
 
 .post-content pre {
-  background: #050810;
-  border: 2px solid #8000ff;
+  background: #050810 !important;
+  border: 2px solid #8000ff !important;
   border-radius: 0;
-  padding: 1.5rem;
+  padding: 1.5rem !important;
   overflow-x: auto;
   margin: 1.5rem 0;
   box-shadow: 0 0 20px rgba(128, 0, 255, 0.3);
 }
 
 .post-content pre code {
-  color: #39ff14;
-  border: none;
-  padding: 0;
-  background: none;
+  color: #39ff14 !important;
+  border: none !important;
+  padding: 0 !important;
+  background: none !important;
 }
 
 /* ==================== TABELAS ==================== */
