@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <div class="post-title-row">
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    </div>
+    
+    <div class="post-meta-enhanced">
+      <div class="post-date-author">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          📅 {{ page.date | date: "%d de %B de %Y" | replace: "January", "Janeiro" | replace: "February", "Fevereiro" | replace: "March", "Março" | replace: "April", "Abril" | replace: "May", "Maio" | replace: "June", "Junho" | replace: "July", "Julho" | replace: "August", "Agosto" | replace: "September", "Setembro" | replace: "October", "Outubro" | replace: "November", "Novembro" | replace: "December", "Dezembro" }}
+        </time>
+      </div>
+      
+      {% if page.categories %}
+      <div class="post-categories">
+        {% for category in page.categories %}
+          <span class="post-category-badge">{{ category }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if page.excerpt %}
+    <p class="post-excerpt-featured">
+      💡 <em>{{ page.excerpt }}</em>
+    </p>
+    {% endif %}
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <div class="post-footer">
+    <div class="post-nav">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" class="post-prev">← {{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a href="{{ page.next.url }}" class="post-next">{{ page.next.title }} →</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
