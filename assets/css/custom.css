@@ -81,7 +81,7 @@ main {
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 3px;
-  text-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-magenta);
+  text-shadow: 0 0 5px var(--primary-cyan);
   transition: all 0.3s ease;
 }
 
@@ -103,6 +103,7 @@ main {
   border: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
 
 .page-link::before {
@@ -528,10 +529,10 @@ main {
 
 @keyframes pulse-glow {
   0%, 100% {
-    text-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-magenta);
+    text-shadow: 0 0 5px var(--primary-cyan);
   }
   50% {
-    text-shadow: 0 0 20px var(--primary-cyan), 0 0 40px var(--primary-magenta), 0 0 60px var(--primary-purple);
+    text-shadow: 0 0 10px var(--primary-cyan), 0 0 15px var(--primary-magenta);
   }
 }
 
