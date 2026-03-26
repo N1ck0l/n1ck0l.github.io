@@ -33,6 +33,9 @@ body {
   line-height: 1.6;
   position: relative;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Efeito de grid futurístico de fundo */
@@ -56,8 +59,6 @@ main {
   z-index: 1;
 }
 
-/* ==================== HEADER/NAVBAR ==================== */
-
 .site-header {
   background: linear-gradient(90deg, var(--dark-bg) 0%, rgba(128, 0, 255, 0.1) 100%);
   border-bottom: 2px solid var(--primary-cyan);
@@ -67,6 +68,12 @@ main {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-title {
@@ -116,6 +123,90 @@ main {
 .page-link:hover {
   color: var(--primary-cyan);
   text-shadow: 0 0 10px var(--primary-cyan);
+}
+
+/* Mobile Navigation */
+.nav-trigger {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  width: 36px;
+  height: 26px;
+  line-height: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.menu-icon > svg {
+  fill: var(--primary-cyan);
+  transition: fill 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .site-title {
+    font-size: 1.3rem;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    background: var(--card-bg);
+    border: 2px solid var(--primary-purple);
+    border-radius: 0;
+    text-align: right;
+  }
+
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .nav-trigger + label > .menu-icon {
+    display: block;
+  }
+
+  .nav-trigger:checked + label > .menu-icon {
+    fill: var(--primary-magenta);
+  }
+
+  .trigger {
+    clear: both;
+    display: none;
+  }
+
+  .nav-trigger:checked + label + .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .trigger {
+    padding-bottom: 5px;
+  }
+
+  .page-link {
+    display: block;
+    padding: 5px 10px;
+    margin-left: 20px;
+    line-height: 1.4;
+  }
+
+  .site-nav {
+    float: right;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    text-align: right;
+  }
 }
 
 /* ==================== POSTS E CARDS ==================== */
@@ -281,6 +372,94 @@ main {
   text-align: center;
   color: var(--text-secondary);
   box-shadow: inset 0 1px 0 rgba(255, 0, 110, 0.2);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: var(--primary-cyan);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-shadow: 0 0 10px var(--primary-cyan);
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+}
+
+.footer-col p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  color: var(--primary-cyan);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--primary-magenta);
+  text-shadow: 0 0 10px var(--primary-magenta);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0.5rem 0;
+}
+
+.tech-stack {
+  font-size: 0.85rem;
+  color: var(--accent-neon);
+}
+
+.tech-stack a {
+  color: var(--accent-neon);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tech-stack a:hover {
+  color: var(--primary-cyan);
+  text-shadow: 0 0 10px var(--primary-cyan);
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
 }
 
 .site-footer a {
@@ -1131,5 +1310,34 @@ main {
   .search-result-meta {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+
+/* ==================== WRAPPER & PAGE CONTENT ==================== */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+main {
+  flex: 1;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 1rem;
   }
 }

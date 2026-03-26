@@ -20,6 +20,7 @@
 
 title: O Guia do Espadachim de TI
 email: nickolasfelipe225@gmail.com
+author: Nickolas
 description: >- # this means to ignore newlines until "baseurl:"
   O grimório técnico de um Espadachim de TI: de redes a hardware.
 baseurl: "" # the subpath of your site, e.g. /blog
